@@ -1,0 +1,30 @@
+[
+  {
+    "name": "温泉",
+    "path": "onsen/"
+    "sub": [
+       {
+         "name": "ゆったり",
+         "path": "yuttari/"
+       }, 
+       {
+         "name": "足湯",
+         "path": "ashiyu/"
+       }, 
+       {
+         "name": "だらだら",
+         "path": "daradara"
+       }
+    ]
+  },
+  {
+    "name": "フォトジェニック",
+    "path": "photo/"
+    "sub": [
+      {
+         "name": "",
+         "path": "default/"
+      }
+    ]
+  }
+]
