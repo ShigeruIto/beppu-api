@@ -2,41 +2,36 @@
   {
     "key":"message",
     "name":"本文",
-    "attribute":"text",
+    "attribute":"text"
   },
   {
     "key":"address",
     "name":"住所",
-    "attribute":"text",
+    "attribute":"text"
   },
   {
     "key":"tel",
-    "name","電話番号"
-    "attribute":"text",
+    "name","電話番号",
+    "attribute":"text"
   },
   {
     "key":"price",
-    "name","入湯料金"
-    "attribute":"text",
+    "name","入湯料金",
+    "attribute":"text"
   },
   {
     "key":"time",
-    "name","利用時間"
-    "attribute":"text",
+    "name","利用時間",
+    "attribute":"text"
   },
   {
     "key":"closeingday",
-    "name","定休文字列"
-    "attribute":"text",
-  },
-  {
-    "key":"thumbnail",
-    "name",""
-    "attribute":"jpg"  ・・・サムネイル用画像
+    "name","定休日",
+    "attribute":"text"
   },
   {
     "key":"picture",
-    "name","外観"
-    "attribute":"jpg"  ・・・大きい画像
-  },
+    "name","外観",
+    "attribute":"jpg"
+  }
 ]

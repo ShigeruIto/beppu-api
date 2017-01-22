@@ -40,6 +40,9 @@ attribute.json … detail.json の属性を規定。
 detail.json … 1物件の詳細情報を格納
              attribute.jsonに対応したカラムで作成
              詳細は、サンプルデータ sample_data/onsen/ashiyu/00001/detail.json
+
+* 各jsonの"path"を連結することで、目的のデータのパスを生成。
+   例）detail.jsonは、cate.jsonの"path" + cate.jsonの"sub/path" + list.jsonの"path"
  
 
 ■３．手入力用excel仕様＊＊＊＊＊＊＊＊＊＊現在検討中

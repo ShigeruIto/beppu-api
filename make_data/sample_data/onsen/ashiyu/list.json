@@ -1,37 +1,39 @@
 [
   {
-    name:"竹瓦温泉",
-    open:[
+    "name":"竹瓦温泉",
+    "open":[
       {
-        remark: "",
-        stime: "6:30",
-        etime: "22:30"
+        "remark":"",
+        "stime":"6:30",
+        "etime":"22:30"
       },
       {
-        remark: "足湯(受付)",
-        stime: "8:00",
-        etime: "21:30"
+        "remark":"足湯(受付)",
+        "stime":"8:00",
+        "etime":"21:30"
       }
     ],
-    coordinates:{
+    "coordinates":{
       "lat":33.2774691,
       "lng":131.5060053
     },
-    path:"00001/"
+    "thumbnail":"00001/small_takegawara.jpg",
+    "path":"00001/"
   },
   {
-    name:"北浜温泉(テルマス)",
-    open:[
+    "name":"北浜温泉(テルマス)",
+    "open":[
       {
-        remark: "",
-        stime: "10:00",
-        etime: "21:00"
+        "remark":"",
+        "stime":"10:00",
+        "etime":"21:00"
       }
     ],
     coordinates:{
       "lat":33.28602,
       "lng":131.505115
     },
-    path:"00002/"
+    "thumbnail":"00002/small_takegawara.jpg",
+    "path":"00002/"
   }
 ]
