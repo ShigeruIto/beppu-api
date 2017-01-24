@@ -1,4 +1,5 @@
 データ仕様                       2017.01.21 create
+                                 2017.01.24 update
 
 
 ■１．URL仕様
@@ -26,49 +27,45 @@ url_root/
 
 ■２．json仕様
 cate.json … カテゴリ･サブカテゴリ一覧
-             詳細は、サンプルデータ sample_data/cate.json 参照
+             x 手打ちサンプルデータは、 sample_data/cate.json 参照
+             o 自動作成データは、data/cate.json 参照
 
 list.json … サブカテゴリ内のデータ一覧
              今回の要件は、営業時間内でかつ近隣のデータをモバイル側で
 　　　　　　 マッチングを行うため、必要最低限のデータ（緯度経度、営業時間）
              だけでリスト化
-             詳細は、サンプルデータ sample_data/onsen/ashiyu/list.json を参照
+             x 手打ちサンプルデータは、sample_data/onsen/ashiyu/list.json を参照
+             o 自動作成データは、data/spa/beppuall/list.json を参照
 
 attribute.json … detail.json の属性を規定。
-             詳細は、サンプルデータ sample_data/onsen/ashiyu/attribute.json
+             x 手打ちサンプルデータは sample_data/onsen/ashiyu/attribute.json
+             o 自動作成サンプルデータは data/spa/beppuall/attribute.json
              
 detail.json … 1物件の詳細情報を格納
              attribute.jsonに対応したカラムで作成
-             詳細は、サンプルデータ sample_data/onsen/ashiyu/00001/detail.json
+             x 手打ちサンプルデータ sample_data/onsen/ashiyu/00001/detail.json
+             o 自動作成サンプルデータは data/spa/beppuall/10000/detail.json
 
 * 各jsonの"path"を連結することで、目的のデータのパスを生成。
    例）detail.jsonは、cate.jsonの"path" + cate.jsonの"sub/path" + list.jsonの"path"
  
 
-■３．手入力用excel仕様＊＊＊＊＊＊＊＊＊＊現在検討中
+■３．手入力用excel仕様
 (1) サブカテゴリごとにexcelシートを作成
-      1行目にフィールドkeyを並べる。name tel time　・・・。a-z列に必須項目。aa列からは、専用項目を並べる。
-      2行名にkeyに対するnameを並べる。名称 電話 営業時間・・・
-      3行目にkeyに対するattributeを並べる。text text text ・・・
-タイトル, それ以降データ
-      4行目移行を、データ部とする
 
-  ＊営業時間は、検索条件になるので解析しやすくするように配列化が必要。例えば以下のような文字列をexcelにどう分けて、入力するか検討。
-      8:30-22:30、砂湯8:00-受付21:30
-
-＊＊＊
-仕様がまとまり次第、excelで数行の簡単なサンプルを作成します。
-実際のデータはどなたかに作成していただきたく思います。
+  詳細は、input/beppu_apiデータ入力用.xlsx の「表紙」シート参照
 
 
 
-
-■４．excelデータの変換プログラム仕様＊＊＊＊＊＊＊＊＊＊現在検討中
+■４．excelデータの変換プログラム仕様
 
 excelデータを1の階層的なURLと2のjsonに変換するプログラム。
 
-excelデータをutf-8でcsvに落としたものを入力とし、
-パイソンかシェルスクリプトで開発予定です。
+excelデータをutf-8でcsvに落としたものを入力とし、パイソンで開発です。
 
+
+実行手順：
+　・excelデータをサブカテゴリシートごとに、tsvに落とす(utf-8)。
+  ./make_data.py を実行すると、inputの下にある全てのtsvを変換して、dataの下に作成される
 
 
