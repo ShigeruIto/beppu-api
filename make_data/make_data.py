@@ -16,9 +16,13 @@ def make(key, attr, value):
 	if( attr == "times" or attr == "infos" ):		# times属性と、infos属性だけは、さらにコレクション化
 		x = {key:[]}
 		for n in value.split('|'):
-			s=n.split("=")
-			if(len(s)==2):				# key=value の形になっているときのみ登録
-				x[key].append({s[0] : s[1]});
+			p={}
+			for m in n.split(','):
+				s=m.split("=")
+				if(len(s)==2):				# key=value の形になっているときのみ登録
+					p.update({s[0]:s[1]});
+			x[key].append(p);
+		print x
 	else:
 		x = {key:value}					# text属性などは、そのまま設定
 	return x
