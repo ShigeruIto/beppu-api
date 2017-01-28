@@ -22,7 +22,6 @@ def make(key, attr, value):
 				if(len(s)==2):				# key=value の形になっているときのみ登録
 					p.update({s[0]:s[1]});
 			x[key].append(p);
-		print x
 	else:
 		x = {key:value}					# text属性などは、そのまま設定
 	return x
