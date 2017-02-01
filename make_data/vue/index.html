@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+ <html lang="ja">
+  <head>
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   <title>vue.jsの勉強</title>
+  </head>
+  <body>
+   <div>
+    <b> vue.js の勉強を兼ねた、UIを一切考慮しないデータビューア</b><br><br>
+    <b> カテゴリメニュー </b><br><br>
+      <div id="catemenu">
+        <li v-for="cate in cates">
+		<button v-on:click="cateclick(cate)">{{cate.name}}</button>
+        </li>
+        <hr>
+        <br>{{cate.name}}</b>サブカテゴリ
+        <li v-for="sub in subs">
+	   <button v-on:click="subclick(sub)">{{sub.name}}</button>
+        </li>
+        <hr>
+        <b>リスト</b><br>(実際は、現在地と時間から絞り込むことになると思いますが、UIを考慮しないビューアなので全部出します)<br>
+        <li v-for="list in lists">
+           <img v-bind:src="thumburl(list)" width="64" height="64"></img>
+	   <button v-on:click="listclick(list)">{{list.name}}</button>
+           {{getopen(list)}}
+        </li>
+      </div>
+   </div>
+
+
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<script type="text/javascript" src="index_js.js"></script> 
+  </body>
+ </html>
+

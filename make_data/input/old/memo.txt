@@ -1,0 +1,8 @@
+
+# githubのデータを取得する方法
+
+https://raw.githubusercontent.com/{User Name}/{Repository Name}/{Branch}/{File Path}
+
+Ex)
+https://raw.githubusercontent.com/ShigeruIto/beppu-api/master/make_data/data/cate.json
+

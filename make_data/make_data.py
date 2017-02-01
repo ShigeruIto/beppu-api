@@ -113,7 +113,7 @@ for file in tsv_files:
 	if( i>=len(cate) ):					# 新規カテゴリ追加
 		cate.append(0)
 		cate[i] = {"name":head["cate_name"], "path":head["cate_path"], "sub":[]}
-	cate[i]["sub"].append({"name" : head["sub_name"], "path" : head["sub_name"]});
+	cate[i]["sub"].append({"name" : head["sub_name"], "path" : head["sub_path"]});
 
 	# ホルダ作成
 	a = root + "/" + head["cate_path"]

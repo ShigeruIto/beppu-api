@@ -1,1 +1,1 @@
-[{"path": "spa", "name": "温泉", "sub": [{"path": "別府全土", "name": "別府全土"}, {"path": "まったり", "name": "まったり"}]}, {"path": "busstop", "name": "バス停", "sub": [{"path": "路線", "name": "路線"}]}]
+[{"path": "spa", "name": "温泉", "sub": [{"path": "beppuall", "name": "別府全土"}, {"path": "mattari", "name": "まったり"}]}, {"path": "busstop", "name": "バス停", "sub": [{"path": "route", "name": "路線"}]}]
